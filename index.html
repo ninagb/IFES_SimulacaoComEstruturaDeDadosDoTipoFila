@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <title>Simulação com Estrutura de Dados do Tipo Fila</title>
 </head>
 <body>
@@ -17,24 +18,22 @@ de chegada.</p>
     <main>
        
        <div class="botoes">
-        <button type="button">Adicionar pacote à fila</button>
-        <button type="submit">Entregar pacote</button>
+        <button type="button" id="adicionar">Adicionar pacote à fila</button>
+        <button type="submit" id="entregar">Entregar pacote</button>
        </div>
                
        <div class="listas">       
         <div class="lista">
             <h2>Fila de pacotes para entrega</h2>
-            <ol>
-                <li>Item 1</li>
-                <li>Item 2</li>
+            <ol id="listaParaEntrega">
+                
             </ol>
         </div>  
        
         <div class="lista">
             <h2>Histórico de pacotes entregues</h2>
-            <ol>
-                <li>Item 1</li>
-                <li>Item 2</li>
+            <ol id="listaEntregues">
+                
             </ol>
         </div> 
        </div>
