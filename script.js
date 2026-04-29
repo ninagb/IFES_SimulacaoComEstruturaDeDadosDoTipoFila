@@ -71,4 +71,10 @@ botaoEntregar.onclick = function () {
   let listaParaEntrega = document.getElementById("listaParaEntrega");
   let primeiroItem = listaParaEntrega.querySelector("li"); //pega o primeiro li da lista
   listaParaEntrega.removeChild(primeiroItem); //remove o primeiro li da lista ol do HTML
+
+  //Animação no momento da entrega
+  let entregador = document.getElementById("entregador");
+  entregador.classList.remove("animando"); //verifica se tem algum elemento com classe entregador na tela e o exclui. Dessa forma, quando apertamos em Entregar pacote várias vezes, a animação reinicia a cada clique
+  void entregador.offsetWidth; //uma estratégia para forçar o navegador a reparar que o elemento com classe entregador foi excluído. O navegador pode ignorar a "ordem" de exclusão e considerar só a de adição. O método offsetWidth retorna a largura do elemento (isso força o navegador a parar, para averiguar a informação pedida); e o avoid retorna undefined (não vamos usar o valor do método para nada)
+  entregador.classList.add("animando");
 };

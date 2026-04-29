@@ -38,7 +38,7 @@ main {
 button {
     padding: 30px;
     font-size: 25px;
-    margin-bottom: 80px;
+    margin-bottom: 30px;
     border-radius: 20px;
 }
 
@@ -74,4 +74,30 @@ footer {
    text-align: center;
    font-weight: bolder;
    padding: 10px;
+}
+
+
+#faixaAnimacao {
+  width: 100%;
+  height: 65px;
+  overflow: hidden; /*esconde os emojis quando estiverem fora da faixa*/
+  position: relative;
+  
+}
+
+#entregador {
+  position: absolute;
+  font-size: 50px;
+  left: -150px;  
+  transform: scaleX(-1); /* espelha o caminhão para a direita */
+}
+
+@keyframes entregar { /*Regra CSS para animações (define etapas e estilos)*/
+  0%   { left: -150px; } /*início da animação - 0% dela*/
+  100% { left: 110%; } /*fim da animação - 100% dela*/
+}
+
+.animando {
+  animation: entregar 4s linear;
+  transform: scaleX(-1); /* mantém o espelho durante a animação */
 }
